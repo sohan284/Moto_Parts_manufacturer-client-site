@@ -1,0 +1,59 @@
+[
+    {
+        "id": 1,
+        "name": "Brake Clutch Lever",
+        "price": "950",
+        "quantity": 634,
+        "minOQ":49,
+        "description": "Light shooting and different displays may cause the color of the item in the picture a little different from the real thing. The measurement allowed error is +/- 1-3cm ",
+        "img": "https://i.ibb.co/HDtxxrw/98ac128484e34d834c308ae79e39beb7.jpg"
+    },
+    {
+        "id": 2,
+        "name": "Modified 3 Part Full Handle",
+        "price": "1085",
+        "quantity": 1534,
+        "minOQ":49,
+        "description": "It is used for most motorcycle handles to effectively protect the hands of the driver. At the same time, its anti-skid and shock absorption functions make it ...",
+        "img": "https://i.ibb.co/dB5G4f5/c935526eaab9a731b23722624f04ddef.jpg"
+    },
+    
+    {
+        "id": 3,
+        "name": "Motorcycle flashing light",
+        "price": "197",
+        "quantity": 2234,
+        "minOQ":49,
+        "description": "6 LED 8 flashing  warning light side light daytime running light turn signal.Applicable models: general purpose (cars, trucks, trucks, motorcycles, etc.Working voltage: 12v-24v.Power: 18w.Waterproof rating: IPX4.Product life about 50,000 hours",
+        "img": "https://i.ibb.co/Y0m6NsW/ca97c2220bb9919dfca0061cdc4c2447.jpg"
+    },
+    {
+        "id": 4,
+        "name": "CT100 Bajaj Clutch Cable",
+        "price": "350",
+        "quantity": 784,
+        "minOQ":49,
+        "description": "clutch cable assy are manufactured from high quality material and high tensile steel.features: friction free,thermal resistance and durability. the fitment of the product is as per oe specification.",
+        "img": "https://i.ibb.co/nkfYq9n/d551f71ca18ecd4f6075c7237a443cc2.jpg"
+    },
+  
+    {
+        "id": 5,
+        "name": "Universal Handle guard",
+        "price": "650",
+        "quantity": 1376,
+        "minOQ":49,
+        "description": "Products with electrical plugs are designed for use in the US. Outlets and voltage differ internationally and this product may require an adapter or converter for use in your destination. Please check compatibility before purchasing.",
+        "img": "https://i.ibb.co/kDFcT95/cabf15b0e8e284846f39fb10330d877d.jpg"
+    },
+    {
+        "id": 6,
+        "name": "Chain Sprocket Set With Chain",
+        "price": "1499",
+        "quantity": 874,
+        "minOQ":49,
+        "description": "Product details of Chain Sprocket Set With Chain For Bajaj Discover 135cc Bajaj Motorcycle Market Product Long Lasting.",
+        "img": "https://i.ibb.co/ccdWXrh/90e003e8d064f8fd3b207cd047a90d59.jpg"
+    }
+  
+]

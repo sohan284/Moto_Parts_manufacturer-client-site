@@ -1,6 +1,10 @@
 .App {
   text-align: center;
 }
+.bannerImg{
+  height: 500px;
+  background-image:url("https://i.ibb.co/qmmFg6f/parts.png") ;
+}
 
 .App-logo {
   height: 40vmin;
