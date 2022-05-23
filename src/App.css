@@ -5,7 +5,12 @@
   height: 500px;
   background-image:url("https://i.ibb.co/qmmFg6f/parts.png") ;
 }
+.loginForm{
+  margin-top: 20px;
+  border-radius: 10px;
+  padding: 30px;
 
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
