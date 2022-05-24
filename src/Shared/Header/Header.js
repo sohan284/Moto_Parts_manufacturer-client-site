@@ -20,7 +20,7 @@ const Header = () => {
           <ul class="menu menu-horizontal p-0">
     
             <li><Link to={'/'}>Home</Link></li>
-            <li><Link to={'/purchase'}>Purchase</Link></li>
+          
             <li><a>Item 3</a></li>
           </ul>
         </div>

@@ -6,7 +6,7 @@ const Part = ({part}) => {
   
   const handlePurchase = id =>{
     console.log(id);
-    navigate('/purchase')
+    navigate(`/purchase/${id}`)
 
   }
     const {name,img,description,price,quantity,minOQ,_id} = part;
