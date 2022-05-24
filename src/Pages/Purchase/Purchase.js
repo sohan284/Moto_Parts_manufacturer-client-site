@@ -18,13 +18,13 @@ const Purchase = () => {
             .then(data => setPart(data))
     }, [])
     return (
-        <div class="card w-96 w-full bg-secondary items-center text-center shadow-xl">
-             <h2 class="card-title mt-5 font-bold text-primary text-4xl">{part.name}</h2>
+        <div className="card w-96 w-full bg-secondary items-center text-center shadow-xl">
+             <h2 className="card-title mt-5 font-bold text-primary text-4xl">{part.name}</h2>
              <p className='mt-3'><small>{part.description}</small></p>
-        <figure class="px-10 pt-10">
-          <img width={300} src={part.img} alt="Shoes" class="rounded-xl" />
+        <figure className="px-10 pt-10">
+          <img width={300} src={part.img} alt="Shoes" className="rounded-xl" />
         </figure>
-        <div class="card-body items-center text-center">
+        <div className="card-body items-center text-center">
             <h2 className='font-bold'>Price : {part.price}</h2>
         
           <div className='flex my-5'>
@@ -45,12 +45,12 @@ const Purchase = () => {
                     message: "Quantity Is Required!",
                   },
                   min: {
-                    value: part.minOQ,
+                    value: `${part.minOQ}`,
                     message:` Order At least ${part.minOQ} piece!`,
                   },
                   max: {
-                    value: part.availableQuantity,
-                    message: `Can order maximum ${part.availableQuantity} piece!`,
+                    value:` ${part.quantity}`,
+                    message: `Can order maximum ${part.quantity} piece!`,
                   },
                 })}
               />
