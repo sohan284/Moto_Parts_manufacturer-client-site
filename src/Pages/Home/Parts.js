@@ -11,7 +11,7 @@ const Parts = () => {
             <div className='grid mt-5 gap-5 lg:grid-cols-3 grid-cols-1
              sm:grid-cols-2'>
             {
-                parts.map(part=><Part part={part}></Part>)
+                parts.map(part=><Part key={part._id} part={part}></Part>)
             }
             </div>
             

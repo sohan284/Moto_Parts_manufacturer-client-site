@@ -1,7 +1,15 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const Part = ({part}) => {
-    const {name,img,description,price,quantity,minOQ} = part;
+  const navigate = useNavigate();
+  
+  const handlePurchase = id =>{
+    console.log(id);
+    navigate('/purchase')
+
+  }
+    const {name,img,description,price,quantity,minOQ,_id} = part;
     return (
         <div class="card w-96 bg-secondary shadow-xl">
         <figure class="px-10 pt-10">
@@ -14,7 +22,7 @@ const Part = ({part}) => {
           <p className='font-semibold'>Minimum Order Quantity : {minOQ}</p>
           <p><span className='font-bold'> About : </span>{description.slice(0,80)}</p>
           <div class="card-actions">
-            <button class="btn btn-primary text-white">Place Order</button>
+            <button onClick={()=>handlePurchase(_id)} class="btn btn-primary text-white">Place Order</button>
           </div>
         </div>
       </div>
