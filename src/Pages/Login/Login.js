@@ -5,7 +5,8 @@ import { Button, Form} from 'react-bootstrap';
 import { Link, Navigate, useNavigate, useLocation } from 'react-router-dom';
 import auth from '../../firebase.init';
 import {useAuthState, useSignInWithEmailAndPassword, useSignInWithGoogle} from 'react-firebase-hooks/auth';
-import { signInWithEmailAndPassword } from 'firebase/auth';
+import { sendPasswordResetEmail, signInWithEmailAndPassword } from 'firebase/auth';
+import { toast } from 'react-toastify';
 // import './Login.css';
 // import SocialLogin from './SocialLogin/SocialLogin';
 
@@ -36,6 +37,7 @@ const Login = () => {
   if (user) {
     navigate(from, { replace: true });
   }
+
   if (loading) {
     return (
       <div className='flex justify-center items-center h-screen'>
@@ -45,6 +47,16 @@ const Login = () => {
   }
   if (error) {
     errorMessage = <p className='text-[red]'>Error: {error?.message}</p>
+}
+const resetPassword = async () => {
+  const email = emailRef.current.value;
+  if (email) {
+      await sendPasswordResetEmail(email);
+      toast('Check your email');
+  }
+  else{
+      toast('Enter  your email address');
+  }
 }
 
   return (
@@ -65,7 +77,7 @@ const Login = () => {
         {/* <Button className='mt-3 bg-white text-black rounded-pill' onClick={handleGoogleSignIn}><img  height={20} src={googlelogo} alt="" /> Sign in</Button> */}
       </Form>
       {errorMessage}
-      <small><p>Forget Password?<button className='btn btn-link text-primary pe-auto text-decoration-none'>Reset Password</button> </p></small>
+      <small><p>Forget Password?<button onClick={resetPassword} className='btn btn-link text-primary pe-auto text-decoration-none'>Reset Password</button> </p></small>
       <small><p>Don't have account? <Link to={'/signup'} className='text-primary pe-auto text-decoration-none'> Please Register</Link></p></small>
       <div className="divider">OR</div>
       <button onClick={()=>signInWithGoogle()} className="text-white rounded-full btn"> <img className='mr-2' width={25} src="https://i.ibb.co/9rXRjXW/new.png" alt="" /> CONTINUE WITH GOOGLE</button>

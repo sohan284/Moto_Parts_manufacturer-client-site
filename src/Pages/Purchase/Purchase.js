@@ -1,22 +1,35 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import { useForm } from "react-hook-form";
 
 const Purchase = () => {
     const { partId } = useParams();
     const [part, setPart] = useState({});
-    const {
-        register,
-        formState: { errors },
-        handleSubmit,
-      } = useForm();
-
+    const [quantityError, setQuantityError] = useState("");
     useEffect(() => {
         const url = `http://localhost:5000/part/${partId}`;
         fetch(url)
             .then(res => res.json())
             .then(data => setPart(data))
-    }, [])
+    }, []);
+   
+    const handleSubmit = event =>{
+
+      event.preventDefault();
+      
+    }
+    const handleError = () => {
+      const quantity = document.getElementById("inputQuantity").value;
+      if (part.minOQ > quantity) {
+        setQuantityError(`Book at least ${part.minOQ} !`);
+      } else if (quantity > part.quantity) {
+        setQuantityError(
+          `You can book maximum ${part.quantity}!`
+        );
+      } else {
+        setQuantityError(null);
+      }
+    };
+   
     return (
         <div className="card w-96 w-full purchase-img bg-secondary items-center text-center shadow-xl">
              <h2 className="card-title mt-5 font-bold text-primary text-4xl">{part.name}</h2>
@@ -33,51 +46,32 @@ const Purchase = () => {
               <div className='ml-10 font-bold text-[red] font-mono'>Minimum Order : {part.minOQ}</div>
           </div>
           <form onSubmit={handleSubmit}>
-              <input
-                type="text"
-                defaultValue={part.minOQ}
-                contentEditable="true"
-                placeholder="Quantity"
-                className="input input-bordered input-primary w-full max-w-xs"
-                {...register("quantity", {
-                  required: {
-                    value: true,
-                    message: "Quantity Is Required!",
-                  },
-                  min: {
-                    value: `${part.minOQ}`,
-                    message:` Order At least ${part.minOQ} piece!`,
-                  },
-                  max: {
-                    value:` ${part.quantity}`,
-                    message: `Can order maximum ${part.quantity} piece!`,
-                  },
-                })}
-              />
-              <label className="label text-sm">
-                {errors.quantity?.type === "required" && (
-                  <span className="label-text-alt text-red-600">
-                    {errors.quantity.message}
-                  </span>
-                )}
-                {errors.quantity?.type === "min" && (
-                  <span className="label-text-alt text-red-600">
-                    {errors.quantity.message}
-                  </span>
-                )}
-                {errors.quantity?.type === "max" && (
-                  <span className="label-text-alt text-red-600">
-                    {errors.quantity.message}
-                  </span>
-                )}
-              </label>
-
+          <input 
+          onChange={handleError}
+              type="number"
+              id='inputQuantity'
+              defaultValue={part.minOQ}
+               className='input input-bordered input-primary mb-2 w-full ' />
+             
+            
               <div className="flex justify-center">
+
+              {quantityError ? (
                 <input
-                  className="btn btn-primary  text-white"
+                  disabled
+                  id="submitButton"
                   type="submit"
-                  value="Book Now"
+                  value="Submit"
+                  className="btn btn-primary max-w-xs"
                 />
+              ) : (
+                <input
+                  id="submitButton"
+                  type="submit"
+                  value="Submit"
+                  className="btn btn-primary  max-w-xs"
+                />
+              )}
               </div>
             </form>
         </div>
@@ -86,3 +80,4 @@ const Purchase = () => {
 };
 
 export default Purchase;
+
