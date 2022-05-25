@@ -9,8 +9,9 @@ const Purchase = () => {
     const [part, setPart] = useState({});
     const [quantityError, setQuantityError] = useState("");
     const [user] =useAuthState(auth);
+
     useEffect(() => {
-        const url = `http://localhost:5000/part/${partId}`;
+        const url = `https://calm-dusk-71886.herokuapp.com/part/${partId}`;
         fetch(url)
             .then(res => res.json())
             .then(data => setPart(data))
@@ -18,7 +19,6 @@ const Purchase = () => {
    
     const handleOrder = event =>{
       event.preventDefault();
-
       const order = {
         user : user.email,
         userName: user.displayName,
@@ -27,7 +27,7 @@ const Purchase = () => {
         quantity : event.target.quantity.value,
         
       }
-      fetch(`http://localhost:5000/order`,{
+      fetch(`https://calm-dusk-71886.herokuapp.com/order`,{
         method: 'POST',
         headers:{
           'content-type':'application/json'
@@ -37,6 +37,7 @@ const Purchase = () => {
       .then(res=>res.json())
       .then(data=>{
         toast(`Order ${event.target.quantity.value} items succesful`)
+
       })
       
     }

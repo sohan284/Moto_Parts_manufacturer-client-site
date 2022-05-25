@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 const useParts = () => {
     const [parts,setParts] = useState([]);
     useEffect( () =>{
-        fetch('http://localhost:5000/part')
+        fetch('https://calm-dusk-71886.herokuapp.com/part')
         .then(res=>res.json())
         .then(data=>setParts(data))
     },[]);

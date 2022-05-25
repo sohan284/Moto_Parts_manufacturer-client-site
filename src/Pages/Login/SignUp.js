@@ -62,7 +62,7 @@ const SignUp = () => {
         <Form.Group className="mb-5 signupField mx-auto w-52" controlId="formBasicPassword">
           <Form.Control className='rounded-lg w-full h-full border-4' ref={passwordRef} type="password" placeholder="Password" required />
         </Form.Group>
-        <Button variant="primary  w-96 mx-auto d-block mb-2" type="submit">
+        <Button variant="primary signupField w-96 mx-auto d-block mb-2" type="submit">
           Sign Up
         </Button>
         <br />

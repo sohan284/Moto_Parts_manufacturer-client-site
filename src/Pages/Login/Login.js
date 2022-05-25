@@ -60,14 +60,14 @@ const resetPassword = async () => {
 }
 
   return (
-    <div className='container loginForm w-50 shadow-xl bg-secondary mx-auto'>
+    <div className='container loginForm w-50 shadow-xl mx-auto'>
       <h2 className='text-primary text-4xl font-bold text-center mb-3'>Login</h2>
       <Form onSubmit={handleLogin}>
-                <Form.Group className="mb-3 mx-auto w-52 " controlId="formBasicEmail">
-                    <Form.Control className='rounded-lg border-4' ref={emailRef} type="email" placeholder="Enter email" required />
+                <Form.Group className="mb-3 signupField mx-auto w-52 " controlId="formBasicEmail">
+                    <Form.Control className=' h-full w-56 border-2 rounded-md' ref={emailRef} type="email" placeholder="Enter email" required />
                 </Form.Group>
-                <Form.Group className="mb-3 mx-auto w-52" controlId="formBasicPassword">
-                    <Form.Control className='rounded-lg border-4'  ref={passwordRef} type="password" placeholder="Password" required />
+                <Form.Group className="mb-3 mx-auto signupField w-full" controlId="formBasicPassword">
+                    <Form.Control className=' h-full w-56 border-2 rounded-md'  ref={passwordRef} type="password" placeholder="Password" required />
                 </Form.Group>
                 <Button variant="primary w-50 mx-auto d-block mb-2" type="submit">
                     Login
