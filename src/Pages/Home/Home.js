@@ -8,6 +8,7 @@ const Home = () => {
     
     return (
         <div className='container mx-auto'>
+             
            <Banner></Banner>
            <Parts></Parts>
            <BusinessSummary></BusinessSummary>
