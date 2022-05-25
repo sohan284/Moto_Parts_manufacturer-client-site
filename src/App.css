@@ -2,15 +2,38 @@
   text-align: center;
 }
 .bannerImg{
+  margin-top: 5px;
   height: 500px;
-  background-image:url("https://i.ibb.co/qmmFg6f/parts.png") ;
+  background-image:url("https://i.ibb.co/09YRmMg/LsaWXu.webp") ; 
+}
+.bannerImg:hover{
+  transform: scale(1.02);
+  transition: transform 3s linear;
+}
+.bannerImg:hover h1{
+  transform: scale(1.2);
+  transition: transform 3s linear;
+}
+.purchase-img:hover img{
+  transform: scale(1.1);
+  transition: transform 3s linear;
+
 }
 .loginForm{
   margin-top: 20px;
   border-radius: 10px;
   padding: 5%;
   width: 35%;
-
+}
+.SignUpForm{
+  margin-top: 20px;
+  border-radius: 10px;
+  padding: 5%;
+  width: 50%;
+}
+.signupField{
+  width: 390px;
+  height: 40px;
 }
 .App-logo {
   height: 40vmin;

@@ -18,11 +18,11 @@ const Purchase = () => {
             .then(data => setPart(data))
     }, [])
     return (
-        <div className="card w-96 w-full bg-secondary items-center text-center shadow-xl">
+        <div className="card w-96 w-full purchase-img bg-secondary items-center text-center shadow-xl">
              <h2 className="card-title mt-5 font-bold text-primary text-4xl">{part.name}</h2>
              <p className='mt-3'><small>{part.description}</small></p>
         <figure className="px-10 pt-10">
-          <img width={300} src={part.img} alt="Shoes" className="rounded-xl" />
+          <img  width={300} src={part.img} alt="" className="rounded-xl " />
         </figure>
         <div className="card-body items-center text-center">
             <h2 className='font-bold'>Price : {part.price}</h2>

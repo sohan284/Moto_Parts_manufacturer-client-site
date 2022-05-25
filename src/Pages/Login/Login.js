@@ -19,8 +19,12 @@ const Login = () => {
   const [user, loading, error] = useAuthState(auth);
 
 
-  const hanldeLogin = () => {
-    signInWithEmailAndPassword(auth);
+  const handleLogin = event => {
+    event.preventDefault();
+    const email = emailRef.current.value;
+  const password = passwordRef.current.value;
+    signInWithEmailAndPassword(email,password);
+    console.log(email,password);
   };
   if (loading) {
     return (
@@ -76,21 +80,21 @@ const Login = () => {
   return (
     <div className='container loginForm w-50 shadow-xl bg-secondary mx-auto'>
       <h2 className='text-primary text-4xl font-bold text-center mb-3'>Login</h2>
-      <Form>
+      <Form onSubmit={handleLogin}>
                 <Form.Group className="mb-3 mx-auto w-52 " controlId="formBasicEmail">
                     <Form.Control className='rounded-lg border-4' ref={emailRef} type="email" placeholder="Enter email" required />
                 </Form.Group>
                 <Form.Group className="mb-3 mx-auto w-52" controlId="formBasicPassword">
                     <Form.Control className='rounded-lg border-4'  ref={passwordRef} type="password" placeholder="Password" required />
                 </Form.Group>
-                <Button onClick={hanldeLogin} variant="primary w-50 mx-auto d-block mb-2" type="submit">
+                <Button variant="primary w-50 mx-auto d-block mb-2" type="submit">
                     Login
                 </Button>
         <br />
         {/* <Button className='mt-3 bg-white text-black rounded-pill' onClick={handleGoogleSignIn}><img  height={20} src={googlelogo} alt="" /> Sign in</Button> */}
       </Form>
       <small><p>Forget Password?<button className='btn btn-link text-primary pe-auto text-decoration-none'>Reset Password</button> </p></small>
-      <small><p>Don't have account? <Link to={'/register'} className='text-primary pe-auto text-decoration-none'> Please Register</Link></p></small>
+      <small><p>Don't have account? <Link to={'/signup'} className='text-primary pe-auto text-decoration-none'> Please Register</Link></p></small>
       <div className="divider">OR</div>
       <button onClick={()=>signInWithGoogle()} className="text-white rounded-full btn"> <img className='mr-2' width={25} src="https://i.ibb.co/9rXRjXW/new.png" alt="" /> CONTINUE WITH GOOGLE</button>
       

@@ -23,7 +23,7 @@ const Header = () => {
               <li><a>Item 3</a></li>
             </ul>
           </div>
-          <a className="btn btn-ghost normal-case text-xl"><span className='text-secondary font-mono text-5xl'>M</span>o<span className='text-secondary font-mono text-2xl'>T</span> o <span className='mx-2'><img width={50} src="https://i.ibb.co/c1z2Ht5/motorbike.png" alt="" /></span>Parts</a>
+          <a className="btn btn-ghost normal-case text-xl"><span className='text-secondary font-serif text-5xl'>M</span>o<span className='text-secondary font-serif text-2xl'>T</span> o <span className='mx-2'><img width={50} src="https://i.ibb.co/c1z2Ht5/motorbike.png" alt="" /></span><span className='text-secondary font-serif text-2xl'>P</span>arts</a>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal p-0">
