@@ -19,6 +19,7 @@ import UpdateProfile from './Pages/Dashboard/UpdateProfile';
 import MyPortfolio from './Pages/MyPortfolio/MyPortfolio';
 import Blogs from './Pages/Blogs/Blogs';
 
+
 function App() {
   return (
     <div className="App">
@@ -47,6 +48,7 @@ function App() {
           <Route path='updateProfile' element={<UpdateProfile></UpdateProfile>}></Route>
 
         </Route>
+  
       </Routes>  
       <Footer></Footer>
       <ToastContainer />
