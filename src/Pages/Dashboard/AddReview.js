@@ -17,7 +17,7 @@ const AddReview = () => {
         star : event.target.rating.value,
         img : event.target.img.value,
       }
-    fetch('http://localhost:5000/review',{
+    fetch('https://calm-dusk-71886.herokuapp.com/review',{
         method: 'POST',
         headers:{
             'content-type':'application/json'
