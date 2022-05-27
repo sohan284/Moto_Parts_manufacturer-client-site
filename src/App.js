@@ -15,6 +15,7 @@ import MyOrder from './Pages/Dashboard/MyOrder';
 import AddReview from './Pages/Dashboard/AddReview';
 import MyProfile from './Pages/Dashboard/MyProfile';
 import Dashboard from './Pages/Dashboard/Dashboard';
+import UpdateProfile from './Pages/Dashboard/UpdateProfile';
 
 function App() {
   return (
@@ -36,8 +37,10 @@ function App() {
         <Dashboard></Dashboard>
         }>
           <Route index element={<MyOrder></MyOrder>}></Route>
+          <Route path='myorder' element={<MyOrder></MyOrder>}></Route>
           <Route path='addreview' element={<AddReview></AddReview>}></Route>
           <Route path='myprofile' element={<MyProfile></MyProfile>}></Route>
+          <Route path='updateProfile' element={<UpdateProfile></UpdateProfile>}></Route>
 
         </Route>
       </Routes>  

@@ -55,7 +55,7 @@ const Purchase = () => {
     };
    
     return (
-        <div className="card w-96 w-full purchase-img bg-secondary items-center text-center shadow-xl">
+        <div className="card w-full purchase-img mx-auto bg-secondary items-center text-center shadow-xl">
              <h2 className="card-title mt-5 font-bold text-primary text-4xl">{part.name}</h2>
              <p className='mt-3'><small>{part.description}</small></p>
         <figure className="px-10 pt-10">

@@ -5,7 +5,7 @@ import { faCoffee } from '@fortawesome/free-solid-svg-icons';
 const Reviews = () => {
     return (
         <div>
-            {/* <h1>Reviews   <FontAwesomeIcon icon={faCoffee} /></h1> */}
+            <h1 className='text-3xl font-bold mt-24 mb-10 text-secondary bg-primary p-1'>Ratings and Reviews</h1>
         </div>
     );
 };

@@ -7,6 +7,7 @@ import { useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import { signInWithEmailAndPassword } from 'firebase/auth';
 
 import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import useToken from './../../Shared/Hooks/useToken';
 
 
 const SignUp = () => {
@@ -15,7 +16,7 @@ const SignUp = () => {
   const passwordRef = useRef('');
   const navigate = useNavigate();
   const location = useLocation();
-  const [signInWithGoogle] = useSignInWithGoogle(auth);
+  const [signInWithGoogle,gUser] = useSignInWithGoogle(auth);
   let from = location.state?.from?.pathname || "/";
   const [
     createUserWithEmailAndPassword,
@@ -24,14 +25,15 @@ const SignUp = () => {
     error,
   ] = useCreateUserWithEmailAndPassword(auth);
 
+  const [token] = useToken(user || gUser);
+
 
   const handleSignUp = () => {
     const email = emailRef.current.value;
     const password = passwordRef.current.value;
     createUserWithEmailAndPassword(email, password)
-    console.log(email, password);
   };
-  if (user) {
+  if (user || gUser) {
     navigate(from, { replace: true });
   }
   if (loading) {
