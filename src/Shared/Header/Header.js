@@ -20,6 +20,7 @@ const Header = () => {
             </label>
             <ul tabIndex="0" className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-primary rounded-box w-52">
             <li className='font-bold text-secondary'><Link to={'/'}>HOME</Link></li>
+            <li className='font-bold text-secondary'><Link to={'/myportfolio'}>Portfolio</Link></li>
             { user &&
               <li className='font-bold text-secondary'><Link to={'/dashboard'}>DASHBOARD</Link></li>}
             <li>{user? <button onClick={logout} className="btn font-bold text-base text-secondary
@@ -32,6 +33,8 @@ const Header = () => {
           <ul className="menu menu-horizontal p-0">
     
             <li className='font-bold text-secondary'><Link to={'/'}>HOME</Link></li>
+            <li className='font-bold uppercase text-secondary'><Link to={'/myportfolio'}>Portfolio</Link></li>
+            <li className='font-bold uppercase text-secondary'><Link to={'/blogs'}>Blogs</Link></li>
         { user &&
            <li className='font-bold text-secondary'><Link to={'/dashboard'}>DASHBOARD</Link></li>}
             <li>{user? <button onClick={logout} className="btn font-bold text-base text-secondary
