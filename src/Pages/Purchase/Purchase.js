@@ -27,7 +27,7 @@ const Purchase = () => {
         quantity : event.target.quantity.value,
         
       }
-      fetch(`https://calm-dusk-71886.herokuapp.com/order`,{
+      fetch(` https://calm-dusk-71886.herokuapp.com/order`,{
         method: 'POST',
         headers:{
           'content-type':'application/json'

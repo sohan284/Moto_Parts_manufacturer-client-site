@@ -7,7 +7,7 @@ const Reviews = () => {
     const [reviews,setReviews] = useReviews([]);
 
     // useEffect(()=>{
-    //     fetch(`http://localhost:5000/review`)
+    //     fetch(`https://calm-dusk-71886.herokuapp.com/review`)
     //     .then(res=>res.json())
     //     .then(data=>setReviews(data))
     // },[])
