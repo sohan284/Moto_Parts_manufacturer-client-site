@@ -18,6 +18,7 @@ import Dashboard from './Pages/Dashboard/Dashboard';
 import UpdateProfile from './Pages/Dashboard/UpdateProfile';
 import MyPortfolio from './Pages/MyPortfolio/MyPortfolio';
 import Blogs from './Pages/Blogs/Blogs';
+import NotFound from './Pages/NotFound/NotFound';
 
 
 function App() {
@@ -48,7 +49,7 @@ function App() {
           <Route path='updateProfile' element={<UpdateProfile></UpdateProfile>}></Route>
 
         </Route>
-  
+        <Route path='*' element={<NotFound></NotFound>}></Route>
       </Routes>  
       <Footer></Footer>
       <ToastContainer />
