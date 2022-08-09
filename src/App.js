@@ -17,7 +17,6 @@ import MyProfile from './Pages/Dashboard/MyProfile';
 import Dashboard from './Pages/Dashboard/Dashboard';
 import UpdateProfile from './Pages/Dashboard/UpdateProfile';
 import MyPortfolio from './Pages/MyPortfolio/MyPortfolio';
-import Blogs from './Pages/Blogs/Blogs';
 import NotFound from './Pages/NotFound/NotFound';
 
 
@@ -29,7 +28,6 @@ function App() {
       <Route path='/' element={<Home></Home>}></Route>
       <Route path='/home' element={<Home></Home>}></Route>
       <Route path='/myportfolio' element={<MyPortfolio></MyPortfolio>}></Route>
-      <Route path='/blogs' element={<Blogs></Blogs>}></Route>
       <Route path='/purchase/:partId' element={
         <RequireAuth>
           <Purchase></Purchase>

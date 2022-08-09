@@ -34,7 +34,7 @@ const Header = () => {
     
             <li className='font-bold text-secondary'><Link to={'/'}>HOME</Link></li>
             <li className='font-bold uppercase text-secondary'><Link to={'/myportfolio'}>Portfolio</Link></li>
-            <li className='font-bold uppercase text-secondary'><Link to={'/blogs'}>Blogs</Link></li>
+        
         { user &&
            <li className='font-bold text-secondary'><Link to={'/dashboard'}>DASHBOARD</Link></li>}
             <li>{user? <button onClick={logout} className="btn font-bold text-base text-secondary
